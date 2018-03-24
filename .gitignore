@@ -1,3 +1,4 @@
 *.so
 *.boot
 *.dll
+build/*.dll
