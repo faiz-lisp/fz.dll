@@ -1,14 +1,14 @@
 
-# 
+# flow:
+>## compile to dll:
+>> gcc -w ../src/c/fz.c -fPIC -shared -o fz.dll
+<br> #g++ -w ../src/c/fz.cpp -fPIC -shared -o fz.cpp.dll
+
+>## check apis:
+>> dumpbin /exports fz.dll
+
+>## newlisp:
 ```
-gcc -w ../src/c/fz.c -fPIC -shared -o fz.dll
-;g++ -w ../src/c/fz.cpp -fPIC -shared -o fz.cpp.dll
-
-
-dumpbin /exports fz.dll
-
-
-newlisp
   ;def dsls
   (def (imp-cdecl-fns lib fnlis)
     (map
